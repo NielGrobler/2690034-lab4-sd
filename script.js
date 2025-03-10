@@ -72,8 +72,8 @@ function loadData() {
                 }
             }
             
-        } catch (err) { 
-            console.log(err)
+        } catch (error) { 
+            console.log(error)
             mainCountryInfo.innerHTML = "An error occurred, make sure you entered a valid country or spelled it correctly.";
             otherCountriesInfo.innerHTML = "";
         }
@@ -98,6 +98,6 @@ async function requestData(url) {
       const json = await response.json();
       return json;
     } catch (error) {
-      return error.message;
+      return error;
     }
   }
